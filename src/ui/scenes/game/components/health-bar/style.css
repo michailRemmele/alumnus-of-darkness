@@ -1,0 +1,21 @@
+.health-bar {
+  height: 24px;
+  width: 30%;
+  min-width: 200px;
+  max-width: 300px;
+
+  background-color: #202020;
+  border: 4px solid #202020;
+}
+
+.health-bar__points {
+  background-color: #682c32;
+
+  height: 100%;
+}
+
+@media screen and (max-height: 481px), screen and (max-width: 768px) {
+  .health-bar {
+    height: 16px;
+  }
+}

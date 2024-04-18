@@ -1,0 +1,45 @@
+{
+  "components.ai.title": "AI",
+  "components.ai.strategy.title": "Strategy",
+  "components.ai.isEnemy.title": "Is Enemy",
+  "components.ai.strategies.lightFighter.title": "lightFighter",
+  "components.ai.strategies.archer.title": "archer",
+  
+  "components.health.title": "Health",
+  "components.health.points.title": "Points",
+
+  "components.movement.title": "Movement",
+  "components.movement.speed.title": "Speed",
+
+  "components.resurrectable.title": "Resurrectable",
+  "components.resurrectable.area.title": "Area",
+
+  "components.enemyDetector.title": "Enemy Detector",
+
+  "components.hitBox.title": "Hit Box",
+
+  "components.ghost.title": "Ghost",
+
+  "components.mana.title": "Mana",
+  "components.mana.points.title": "Points",
+
+  "components.spellbook.title": "Spellbook",
+
+  "components.weapon.title": "Weapon",
+  "components.weapon.type.title": "Type",
+  "components.weapon.types.melee.title": "Melee",
+  "components.weapon.types.range.title": "Range",
+  "components.weapon.cooldown.title": "Cooldown",
+  "components.weapon.properties.damage.title": "Damage",
+  "components.weapon.properties.range.title": "Range",
+  "components.weapon.properties.projectileSpeed.title": "Projectile Speed",
+  "components.weapon.properties.projectileRadius.title": "Projectile Radius",
+  "components.weapon.properties.projectileModel.title": "Projectile Model",
+
+  "systems.movementSystem.title": "Movement System",
+  "systems.healthSystem.title": "Health System",
+  "systems.aiSystem.title": "AI System",
+  "systems.fightSystem.title": "Fight System",
+  "systems.damageSystem.title": "Damage System",
+  "systems.reaper.title": "Reaper"
+}
