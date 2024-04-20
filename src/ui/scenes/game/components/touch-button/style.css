@@ -1,0 +1,33 @@
+.touch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  width: 64px;
+  height: 64px;
+
+  background: none;
+  border: 4px solid white;
+  border-radius: 50%;
+
+  font-size: 32px;
+  color: white;
+}
+
+.touch-button_active {
+  background-color: white;
+}
+
+.touch-button_disabled {
+  opacity: 0.5; 
+}
+
+.touch-button_large {
+  width: 76px;
+  height: 76px;
+
+  font-size: 36px;
+}

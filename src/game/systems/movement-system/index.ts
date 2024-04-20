@@ -22,7 +22,7 @@ import {
 import * as EventType from '../../events';
 import type { MoveEvent } from '../../events';
 
-const JUMP_IMPULSE = -220;
+const JUMP_IMPULSE = -230;
 const SPEED_DIVIDER = 0.4;
 const MIN_SPEED = 0.5;
 const MAX_SPEED = 1;
@@ -61,7 +61,7 @@ export class MovementSystem extends System {
       return;
     }
 
-    const direction = event.angle
+    const direction = event.angle !== undefined
       ? VectorOps.getVectorByAngle(MathOps.degToRad(event.angle)).x
       : event.direction;
 

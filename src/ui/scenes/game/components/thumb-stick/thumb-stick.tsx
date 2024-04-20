@@ -151,6 +151,7 @@ export const ThumbStick: FC<ThumbStickProps> = ({ className }) => {
     window.addEventListener('resize', updateArea);
 
     return () => {
+      console.log('remove');
       window.removeEventListener('resize', updateArea);
 
       observerRef.current?.removeEventListener('pointermove', onPointerMove);

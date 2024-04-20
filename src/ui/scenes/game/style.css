@@ -5,7 +5,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   height: 100%;
-  padding: 10px;
+  padding: max(15px, env(safe-area-inset-top)) max(15px, env(safe-area-inset-right)) max(15px, env(safe-area-inset-bottom)) max(15px, env(safe-area-inset-left));
 }
 
 .game__header {

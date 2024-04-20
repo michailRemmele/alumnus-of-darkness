@@ -1,34 +1,13 @@
 .touch-controls__row {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.touch-controls__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 64px;
-  height: 64px;
-
-  background: none;
-  border: 4px solid white;
-  border-radius: 50%;
-
-  font-size: 32px;
-  color: white;
+.touch-controls__action + .touch-controls__action {
+  margin-left: 10px;
 }
 
-.touch-controls__button_s {
-  width: 48px;
-  height: 48px;
-
-  font-size: 28px;
-
-  margin: 12px 8px 8px 12px;
-}
-
-.touch-controls__button:active {
-  background-color: white;
+.touch-controls__jump {
+  margin: 12px 0px 0px 12px;
 }

@@ -6,10 +6,10 @@ import {
   useMemo,
 } from 'react';
 import type { FC } from 'react';
-import { ActorCollection } from 'remiz';
+import { ActorCollection, KeyboardControl } from 'remiz';
 import { LoadScene } from 'remiz/events';
 
-import { AI } from '../../../game/components';
+import { AI, ThumbStickControl } from '../../../game/components';
 import { EngineContext } from '../../providers';
 import { PLAYER_ID } from '../../../consts/templates';
 import { GAME_ID } from '../../../consts/scenes';
@@ -62,6 +62,9 @@ export const Game: FC = () => {
 
       if (isNoEnemy) {
         setIsVictory(true);
+
+        player?.removeComponent(KeyboardControl);
+        player?.removeComponent(ThumbStickControl);
       }
     };
 
