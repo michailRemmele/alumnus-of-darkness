@@ -8,3 +8,4 @@ export { HitBox } from './hit-box';
 export { Ghost } from './ghost';
 export { Mana } from './mana';
 export { Spellbook } from './spellbook';
+export { ThumbStickControl } from './thumb-stick-control';

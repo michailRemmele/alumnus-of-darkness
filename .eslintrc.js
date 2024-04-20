@@ -21,6 +21,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/no-unused-class-component-methods': 0,
     'react/prop-types': 0,
+    'react/require-default-props': 0,
   },
   overrides: [
     {

@@ -1,7 +1,7 @@
 import type { ActorEvent } from 'remiz';
 
-export const MoveLeft = 'MoveLeft';
-export const MoveRight = 'MoveRight';
+export const ThumbStickInput = 'ThumbStickInput';
+export const Move = 'Move';
 export const MoveJump = 'MoveJump';
 export const ResurrectInput = 'ResurrectInput';
 export const Resurrect = 'Resurrect';
@@ -10,6 +10,18 @@ export const Summon = 'Summon';
 export const Kill = 'Kill';
 export const Attack = 'Attack';
 export const Damage = 'Damage';
+
+export type ThumbStickInputEvent = ActorEvent<{
+  x: number
+  y: number
+}>;
+
+export type MoveEvent = ActorEvent<{
+  direction: number
+  angle?: number
+  x?: number
+  y?: number
+}>;
 
 export type AttackEvent = ActorEvent<{
   x: number
@@ -22,8 +34,8 @@ export type DamageEvent = ActorEvent<{
 
 declare module 'remiz' {
   export interface ActorEventMap {
-    [MoveLeft]: ActorEvent
-    [MoveRight]: ActorEvent
+    [ThumbStickInput]: ThumbStickInputEvent
+    [Move]: MoveEvent
     [MoveJump]: ActorEvent
     [ResurrectInput]: ActorEvent
     [SummonInput]: ActorEvent

@@ -1,8 +1,7 @@
 import type { Reference } from 'remiz-editor';
 
 import {
-  MoveLeft,
-  MoveRight,
+  Move,
   MoveJump,
   ResurrectInput,
   SummonInput,
@@ -10,8 +9,7 @@ import {
 
 export const controlEventsReference: Reference = {
   items: [
-    MoveLeft,
-    MoveRight,
+    Move,
     MoveJump,
     ResurrectInput,
     SummonInput,

@@ -9,8 +9,10 @@
     "build": "npx cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
+    "antd": "5.5.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-i18next": "11.17.2",
     "remiz": "0.12.2",
     "remiz-editor": "0.0.14"
   },

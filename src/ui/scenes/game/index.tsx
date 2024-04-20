@@ -14,11 +14,14 @@ import { EngineContext } from '../../providers';
 import { PLAYER_ID } from '../../../consts/templates';
 import { GAME_ID } from '../../../consts/scenes';
 import * as EventType from '../../../game/events';
+import { isTouchDevice } from '../../utils/is-touch-device';
 
 import {
+  ThumbStick,
   HealthBar,
   // ManaBar,
   ResurrectButton,
+  TouchControls,
 } from './components';
 import './style.css';
 
@@ -72,13 +75,24 @@ export const Game: FC = () => {
 
   return (
     <div className="game">
-      <div className="game__header">
-        <HealthBar />
-        {/* <ManaBar /> */}
-      </div>
-      <div className="game__footer">
-        <ResurrectButton />
-      </div>
+      {!isGameOver && !isVictory && (
+        <>
+          <div className="game__header">
+            <HealthBar />
+            {/* <ManaBar /> */}
+          </div>
+          <div className="game__footer">
+            {isTouchDevice() ? (
+              <TouchControls />
+            ) : (
+              <ResurrectButton />
+            )}
+          </div>
+
+          {isTouchDevice() && <ThumbStick className="game__thumb-stick" />}
+        </>
+      )}
+
       {(isGameOver || isVictory) && (
         <div className="game-over__overlay">
           <div className="game-over__content">

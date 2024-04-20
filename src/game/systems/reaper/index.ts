@@ -1,7 +1,6 @@
 import {
   Actor,
   System,
-  ActorCollection,
 } from 'remiz';
 import type {
   Scene,
@@ -24,7 +23,6 @@ interface GraveyardEntry {
 
 export class Reaper extends System {
   private scene: Scene;
-  private actorCollection: ActorCollection;
   private graveyard: Array<GraveyardEntry>;
   private timeCounter: number;
 
@@ -32,7 +30,6 @@ export class Reaper extends System {
     super();
 
     this.scene = options.scene;
-    this.actorCollection = new ActorCollection(options.scene);
 
     this.graveyard = [];
     this.timeCounter = 0;

@@ -5,6 +5,8 @@ import {
   Transform,
   RigidBody,
   System,
+  MathOps,
+  VectorOps,
 } from 'remiz';
 import type {
   SystemOptions,
@@ -18,8 +20,12 @@ import {
   Movement,
 } from '../../components';
 import * as EventType from '../../events';
+import type { MoveEvent } from '../../events';
 
 const JUMP_IMPULSE = -220;
+const SPEED_DIVIDER = 0.4;
+const MIN_SPEED = 0.5;
+const MAX_SPEED = 1;
 
 export class MovementSystem extends System {
   private scene: Scene;
@@ -39,35 +45,33 @@ export class MovementSystem extends System {
 
   mount(): void {
     this.scene.addEventListener(CollisionEnter, this.handleCollisionEnter);
-    this.scene.addEventListener(EventType.MoveLeft, this.handleMoveLeft);
-    this.scene.addEventListener(EventType.MoveRight, this.handleMoveRight);
+    this.scene.addEventListener(EventType.Move, this.handleMove);
     this.scene.addEventListener(EventType.MoveJump, this.handleJump);
   }
 
   unmount(): void {
     this.scene.removeEventListener(CollisionEnter, this.handleCollisionEnter);
-    this.scene.removeEventListener(EventType.MoveLeft, this.handleMoveLeft);
-    this.scene.removeEventListener(EventType.MoveRight, this.handleMoveRight);
+    this.scene.removeEventListener(EventType.Move, this.handleMove);
     this.scene.removeEventListener(EventType.MoveJump, this.handleJump);
   }
 
-  private handleMoveLeft = (event: ActorEvent): void => {
+  private handleMove = (event: MoveEvent): void => {
     const movement = event.target.getComponent(Movement);
     if (!movement) {
       return;
     }
 
-    movement.direction = -1;
-    movement.isMoving = true;
-  };
+    const direction = event.angle
+      ? VectorOps.getVectorByAngle(MathOps.degToRad(event.angle)).x
+      : event.direction;
 
-  private handleMoveRight = (event: ActorEvent): void => {
-    const movement = event.target.getComponent(Movement);
-    if (!movement) {
-      return;
+    let intension = 1;
+    if (event.x && event.y) {
+      const controlIntension = MathOps.getDistanceBetweenTwoPoints(0, event.x, 0, event.y);
+      intension = controlIntension < SPEED_DIVIDER ? MIN_SPEED : MAX_SPEED;
     }
 
-    movement.direction = 1;
+    movement.direction = direction * intension;
     movement.isMoving = true;
   };
 

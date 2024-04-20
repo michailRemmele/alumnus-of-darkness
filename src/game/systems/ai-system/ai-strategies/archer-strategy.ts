@@ -172,7 +172,8 @@ export class ArcherStrategy implements AIStrategy {
     const { offsetX } = this.actor.getComponent(Transform);
 
     this.actor.dispatchEvent(
-      enemyX > offsetX ? EventType.MoveRight : EventType.MoveLeft,
+      EventType.Move,
+      { direction: enemyX > offsetX ? 1 : -1 },
     );
   }
 
@@ -196,7 +197,8 @@ export class ArcherStrategy implements AIStrategy {
     }
 
     this.actor.dispatchEvent(
-      playerTransform.offsetX > actorTransform.offsetX ? EventType.MoveRight : EventType.MoveLeft,
+      EventType.Move,
+      { direction: playerTransform.offsetX > actorTransform.offsetX ? 1 : -1 },
     );
   }
 

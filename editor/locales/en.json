@@ -1,4 +1,12 @@
 {
+  "components.thumbStickControl.title": "Thumb Stick Control",
+  "components.thumbStickControl.bind.title": "Event Bind {{index}}",
+  "components.thumbStickControl.bind.event.title": "Event",
+  "components.thumbStickControl.bind.eventType.title": "Event Type",
+  "components.thumbStickControl.bind.attributes.title": "Attributes",
+  "components.thumbStickControl.bind.addNew.title": "Add New Bind",
+  "components.thumbStickControl.option.positionChange.title": "Position Change",
+
   "components.ai.title": "AI",
   "components.ai.strategy.title": "Strategy",
   "components.ai.isEnemy.title": "Is Enemy",
@@ -41,5 +49,6 @@
   "systems.aiSystem.title": "AI System",
   "systems.fightSystem.title": "Fight System",
   "systems.damageSystem.title": "Damage System",
-  "systems.reaper.title": "Reaper"
+  "systems.reaper.title": "Reaper",
+  "systems.thumbStickController.title": "Thumb Stick Controller"
 }

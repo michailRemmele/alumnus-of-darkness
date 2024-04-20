@@ -11,6 +11,7 @@ import {
   Ghost,
   Mana,
   Spellbook,
+  ThumbStickControl,
 } from '../../../src/game/components';
 
 import { ai } from './ai';
@@ -23,8 +24,10 @@ import { hitBox } from './hit-box';
 import { ghost } from './ghost';
 import { mana } from './mana';
 import { spellbook } from './spellbook';
+import { thumbStickControl } from './thumb-stick-control';
 
 export const componentsSchema: Record<string, WidgetSchema> = {
+  [ThumbStickControl.componentName]: thumbStickControl,
   [AI.componentName]: ai,
   [Health.componentName]: health,
   [Movement.componentName]: movement,
