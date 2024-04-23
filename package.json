@@ -13,7 +13,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-i18next": "11.17.2",
-    "remiz": "/Users/mihailremmele/Documents/Projects/remiz/remiz-0.12.6.tgz",
+    "remiz": "0.12.3-alpha.0",
     "remiz-editor": "0.0.14"
   },
   "devDependencies": {
