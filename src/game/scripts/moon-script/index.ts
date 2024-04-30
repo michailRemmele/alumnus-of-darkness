@@ -10,6 +10,7 @@ import {
 } from 'remiz';
 
 const MOON_OFFSET_X = -44;
+const MOON_OFFSET_Y = -44;
 
 export class MoonScript extends Script {
   private scene: Scene;
@@ -32,6 +33,7 @@ export class MoonScript extends Script {
     const moonTransform = this.actor.getComponent(Transform);
 
     moonTransform.offsetX = cameraTransform.offsetX + MOON_OFFSET_X;
+    moonTransform.offsetY = cameraTransform.offsetY + MOON_OFFSET_Y;
   }
 }
 

@@ -23,6 +23,10 @@ import {
   ScriptBundle,
   Light,
 } from 'remiz';
+import {
+  ParallaxSystem,
+  Parallax,
+} from 'remiz-game-systems';
 
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';
@@ -45,6 +49,7 @@ const engine = new Engine({
     SpriteRenderer,
     UiBridge,
     ScriptSystem,
+    ParallaxSystem,
     ...Object.values(GameSystems),
   ],
   components: [
@@ -58,6 +63,7 @@ const engine = new Engine({
     MouseControl,
     ScriptBundle,
     Light,
+    Parallax,
     ...Object.values(GameComponents),
   ],
   resources: {
