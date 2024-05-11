@@ -3,6 +3,7 @@ import type { ActorEvent } from 'remiz';
 export const ThumbStickInput = 'ThumbStickInput';
 export const Move = 'Move';
 export const MoveJump = 'MoveJump';
+export const Teleport = 'Teleport';
 export const ResurrectInput = 'ResurrectInput';
 export const Resurrect = 'Resurrect';
 export const SummonInput = 'SummonInput';
@@ -23,6 +24,11 @@ export type MoveEvent = ActorEvent<{
   y?: number
 }>;
 
+export type TeleportEvent = ActorEvent<{
+  x: number
+  y: number
+}>;
+
 export type AttackEvent = ActorEvent<{
   x: number
   y: number
@@ -37,6 +43,7 @@ declare module 'remiz' {
     [ThumbStickInput]: ThumbStickInputEvent
     [Move]: MoveEvent
     [MoveJump]: ActorEvent
+    [Teleport]: TeleportEvent
     [ResurrectInput]: ActorEvent
     [SummonInput]: ActorEvent
     [Resurrect]: ActorEvent
