@@ -12,6 +12,7 @@ import {
   Mana,
   Spellbook,
   ThumbStickControl,
+  GroundDetector,
 } from '../../../src/game/components';
 
 import { ai } from './ai';
@@ -25,6 +26,7 @@ import { ghost } from './ghost';
 import { mana } from './mana';
 import { spellbook } from './spellbook';
 import { thumbStickControl } from './thumb-stick-control';
+import { groundDetector } from './ground-detector';
 
 export const componentsSchema: Record<string, WidgetSchema> = {
   [ThumbStickControl.componentName]: thumbStickControl,
@@ -38,4 +40,5 @@ export const componentsSchema: Record<string, WidgetSchema> = {
   [Ghost.componentName]: ghost,
   [Mana.componentName]: mana,
   [Spellbook.componentName]: spellbook,
+  [GroundDetector.componentName]: groundDetector,
 };

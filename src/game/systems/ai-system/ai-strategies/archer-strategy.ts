@@ -101,6 +101,7 @@ export class ArcherStrategy implements AIStrategy {
     if (distance > evadeRange || !this.currentEnemy.getComponent(Health)) {
       this.currentEnemy = undefined;
       this.movementState.target = !this.isEnemy ? this.player : undefined;
+      this.prepareToAttack = false;
     }
   }
 

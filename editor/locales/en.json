@@ -44,6 +44,9 @@
   "components.weapon.properties.projectileRadius.title": "Projectile Radius",
   "components.weapon.properties.projectileModel.title": "Projectile Model",
 
+  "components.groundDetector.title": "Ground Detector",
+  "components.groundDetector.direction.title": "Direction",
+
   "systems.movementSystem.title": "Movement System",
   "systems.healthSystem.title": "Health System",
   "systems.aiSystem.title": "AI System",

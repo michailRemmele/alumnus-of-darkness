@@ -82,7 +82,7 @@ export class LightFighterStrategy implements AIStrategy {
 
     const { offsetY } = this.actor.getComponent(Transform);
     const { offsetY: enemyOffsetY } = enemy.getComponent(Transform);
-    if (Math.abs(offsetY - enemyOffsetY) >= VERTICAL_LIMIT) {
+    if (this.isEnemy && Math.abs(offsetY - enemyOffsetY) >= VERTICAL_LIMIT) {
       return;
     }
 
@@ -104,6 +104,7 @@ export class LightFighterStrategy implements AIStrategy {
     if (distance > evadeRange || !this.currentEnemy.getComponent(Health)) {
       this.currentEnemy = undefined;
       this.movementState.target = !this.isEnemy ? this.player : undefined;
+      this.prepareToAttack = false;
     }
   }
 

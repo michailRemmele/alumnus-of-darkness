@@ -1326,6 +1326,154 @@
                 }
               ],
               "children": []
+            },
+            {
+              "id": "3824fb19-4edc-46a9-ae81-f377355330a7",
+              "name": "Ground Detector (right)",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "ColliderContainer",
+                  "config": {
+                    "type": "boxCollider",
+                    "collider": {
+                      "sizeX": 1,
+                      "sizeY": 1,
+                      "centerX": 0,
+                      "centerY": 0
+                    }
+                  }
+                },
+                {
+                  "name": "ScriptBundle",
+                  "config": {
+                    "scripts": [
+                      {
+                        "id": "892fefd9-761a-4637-912b-3773d250d551",
+                        "name": "GroundDetectorScript",
+                        "options": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 0,
+                    "height": 0,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "foreground",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#fff",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "GroundDetector",
+                  "config": {
+                    "direction": 1
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ec30409d-7e52-4073-9e86-c4dcee74dd21",
+              "name": "Ground Detector (left)",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "ColliderContainer",
+                  "config": {
+                    "type": "boxCollider",
+                    "collider": {
+                      "sizeX": 1,
+                      "sizeY": 1,
+                      "centerX": 0,
+                      "centerY": 0
+                    }
+                  }
+                },
+                {
+                  "name": "ScriptBundle",
+                  "config": {
+                    "scripts": [
+                      {
+                        "id": "892fefd9-761a-4637-912b-3773d250d551",
+                        "name": "GroundDetectorScript",
+                        "options": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 0,
+                    "height": 0,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "foreground",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffffff",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "GroundDetector",
+                  "config": {
+                    "direction": -1
+                  }
+                }
+              ],
+              "children": []
             }
           ]
         },
@@ -1506,86 +1654,6 @@
             }
           ],
           "children": []
-        },
-        {
-          "id": "e75af7ff-7648-4c22-a788-ad410f425320",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 2",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -564,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "3ecdadde-7f6a-4d74-800e-72666d7adcb9",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "08a4f2e4-a0c3-44cd-9464-0059a002d407",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "8bf98d2c-ab00-4473-b214-011f4324a4b6",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 3",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -804,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            },
-            {
-              "name": "Health",
-              "config": {
-                "points": 0
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "862b482d-8f6a-467d-81f8-7e47ce8684a5",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "568616c3-6339-4ad0-a447-3e5ddac023a8",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
         },
         {
           "id": "b34cba80-a521-4b71-bb77-dc0be427274a",
@@ -1782,43 +1850,6 @@
           "children": []
         },
         {
-          "id": "a1d267be-9122-4f3c-bff6-cc215517afdb",
-          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
-          "fromTemplate": true,
-          "name": "Archer",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -156,
-                "offsetY": -108,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "ba481511-d94d-4bc0-b270-7752b356faee",
-              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "8470a964-b693-4f54-bcf7-c637a22d240f",
-              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
           "id": "51d73a59-4ee6-45ef-a5a9-072d27a0c91c",
           "name": "Moon",
           "components": [
@@ -1949,80 +1980,6 @@
             }
           ],
           "children": []
-        },
-        {
-          "id": "19ac30c7-ef9c-48f6-958d-85be3eab4384",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 2",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 36,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "5390b73a-bb26-46c9-88f9-d3027a988ebe",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "ab329c04-45ff-46e8-848c-045461d7b8c7",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "80514e1e-5a7b-475a-9850-6922cbed7e3e",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 3",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 84,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "af505dee-513e-40f8-8c8c-eba211ae236f",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "87b0e46d-fbbb-4970-b833-bb3e770505cb",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
         },
         {
           "id": "623db6cf-90f2-4ce1-a57c-7460ccfa1080",
@@ -2425,43 +2382,6 @@
           "children": []
         },
         {
-          "id": "0bf102cc-8295-414c-b100-06b7e4620536",
-          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
-          "fromTemplate": true,
-          "name": "Archer 1",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -324,
-                "offsetY": -84,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "5201882c-0b5f-40f1-970f-461637d54dcf",
-              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "7b9fd924-824b-496e-829e-edd44438c323",
-              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
           "id": "cc4b1caa-9b15-470d-a934-fecb9f2c34c2",
           "templateId": "7e58ce40-ada3-4910-91a5-1acee4ecf7dc",
           "fromTemplate": true,
@@ -2522,154 +2442,6 @@
           "children": []
         },
         {
-          "id": "2333e7cf-8328-481d-a326-73d8e6e0e8a7",
-          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
-          "fromTemplate": true,
-          "name": "Archer 2",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 444,
-                "offsetY": -108,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "d8c30c43-ada7-42ab-b924-f702b7255f04",
-              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "1242d967-9b91-4fc2-bc87-3ce733cb9970",
-              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "c53c2e1e-78c9-4cbb-90f4-3897da787ee9",
-          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
-          "fromTemplate": true,
-          "name": "Archer 3",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 372,
-                "offsetY": -108,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "0475fb55-81c7-4b2f-9df2-2d8479fe72e7",
-              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "e4f3b957-1cb8-4725-b0ff-12cd62d54d1e",
-              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "1585f539-9cfc-400f-8079-0861fabd5804",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 4",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 276,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "dc564802-5b87-4d4c-a6bc-975dbd56f1a4",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "4e0e389f-cbd7-4554-8943-2b6d14c9dcb7",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "4858d3cd-90d7-4abb-baea-809ed865dbc1",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 5",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 396,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "3efdac87-fb4f-433b-b483-056b87cef1b6",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "b896e492-9ce3-4bfc-a2f9-cee8233e6b75",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
           "id": "adb8c3d5-900d-4718-bf7f-d7366ac39ab7",
           "templateId": "94598976-7350-4853-809b-aea778f6e63c",
           "fromTemplate": true,
@@ -2688,117 +2460,6 @@
             }
           ],
           "children": []
-        },
-        {
-          "id": "48cfdac1-7551-40a2-b01c-cb3784dd4979",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 6",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 684,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "f32c483e-f966-4790-af79-8f8295912855",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "0cfc836f-ecb2-4b75-b675-894b840d4e90",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "7d311270-1568-4888-ba82-3a3135af1884",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 7",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 708,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "40f66044-35f9-43d0-8c95-d257e4bae837",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "440f38dc-90a1-4376-9782-4883d16ac4bb",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "0d3be49a-415b-413e-a8e9-6c0ba6658b8d",
-          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
-          "fromTemplate": true,
-          "name": "Light Fighter 8",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 732,
-                "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "eef03e12-040d-48be-8c8c-e9b6ab49586c",
-              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "dabcf95e-585b-41b3-94d0-f75a454be7e4",
-              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
         },
         {
           "id": "0cd0564c-cae1-49ae-a45e-cf011116cb90",
@@ -2859,43 +2520,6 @@
             }
           ],
           "children": []
-        },
-        {
-          "id": "be1b72c5-e62f-44ff-b460-78aa473c88c9",
-          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
-          "fromTemplate": true,
-          "name": "Archer 4",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 576,
-                "offsetY": -96,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": [
-            {
-              "id": "7df00ecc-79c9-49c5-987d-015974e78a50",
-              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
-              "fromTemplate": true,
-              "name": "Enemy Detector",
-              "components": [],
-              "children": []
-            },
-            {
-              "id": "894ff5cf-5694-4e1a-b33b-5ea21e17ee29",
-              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
-              "fromTemplate": true,
-              "name": "Hit Box",
-              "components": [],
-              "children": []
-            }
-          ]
         },
         {
           "id": "f8df2428-03cc-4452-aa82-a259f83a7976",
@@ -2996,6 +2620,754 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "4338c832-21b9-4ce2-b1fc-7cba9004f852",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -804,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Health",
+              "config": {
+                "points": 0
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "4d284119-a533-46f8-8a32-88a72ed77a45",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "bb8c724b-8c83-49c4-8be0-17640c5e766f",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "bc671424-d987-4675-b394-39bc56c40ad0",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "35be7e52-8cf2-41cc-91aa-d403250d85f9",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4df627ef-c0b4-4737-9de7-8c57e69d8e42",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -564,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "c111f68c-661c-4360-a8a3-320703ac2c0e",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "d1f88819-31fd-441b-8113-e173d4ee4400",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "5cba6cd7-b8ff-451e-9933-bdce32111b37",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "7ece7c69-9b2c-424a-9151-55ca944a6824",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "e74f4c11-7d9e-4e08-b4ee-d8dc52fe7dec",
+          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
+          "fromTemplate": true,
+          "name": "Archer 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -156,
+                "offsetY": -108,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "c14e52e7-08d0-43f4-90e4-76296c52a7e9",
+              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "b12accd6-13fa-46a4-8d22-7eb03d3e9dca",
+              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "e50c06f2-a0dc-4e51-b790-a21e9f58fc85",
+              "templateId": "e89096db-537d-435e-bc04-269194d855e6",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "42166e88-3aec-49b4-be5c-ea2a2cff6c21",
+              "templateId": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "fbac0591-50b0-49fa-b607-c01233e4b30d",
+          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
+          "fromTemplate": true,
+          "name": "Archer 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -324,
+                "offsetY": -84,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "b68481ec-5df8-4fb5-929f-36b455e080f0",
+              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "cccb769b-00c2-4507-bf5d-9236db6ce43e",
+              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "dbaef649-1e58-45b2-a8e7-c330bd1dfea6",
+              "templateId": "e89096db-537d-435e-bc04-269194d855e6",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "ef596754-ae59-4377-ac6d-f786f7638a67",
+              "templateId": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9ca89625-d976-41a9-a1e1-a37e26dba216",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "ea06cbad-825b-4adc-afa1-aedf54fd389d",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "783e5076-b6d4-41d8-957d-7722ab7c1ffc",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "56505d46-d596-447a-bbc0-2d3b13a47068",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "0f48d7e4-dce5-45b5-b7ba-5402ed9580ae",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4a5f1cc5-fa6a-4068-bed1-e16faae06a1d",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 10",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "7839c96f-9d68-42fd-917e-a4848d4861b4",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "4481e6d0-af48-44b9-b57a-cba81f6e332e",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "a6d77674-5f91-4fa0-819c-4166f421936d",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "4a1ef932-ab42-45d0-b40e-2c866157d77e",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "ac3fb977-37f0-44ea-a122-d628e7a4a0f3",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 276,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "ad8ea6dd-ba46-4e43-b5c2-e5dcefa51a50",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "7d01aa6b-fe16-4ee2-806f-c99e9fbcac39",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "9d2d4933-3b97-47d2-9da5-96dfe2588e1b",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "ceaa1916-a7dc-4a25-b678-cd54089e41b9",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "e82210ec-497a-47fc-bcab-44d9c2787b7e",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 10",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 396,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "65cf5abf-436a-4ba9-b2e5-24538d5cd9fe",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "bcb60edd-07c4-47d1-99cb-5f9290f18a79",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "48047809-6574-4f24-b5f1-5e9e684f7a1e",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "a29166ed-d235-403b-8681-ca842c2cd15d",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "c5990b2c-1a29-4947-86b4-39e48549dff4",
+          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
+          "fromTemplate": true,
+          "name": "Archer 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 444,
+                "offsetY": -96,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "17bfa142-05ae-420d-84ec-81471e2b796b",
+              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "6a9514fb-09e6-4719-9421-66c0e6a1c135",
+              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "75d3e912-96ef-495e-be5b-e26e039d4af2",
+              "templateId": "e89096db-537d-435e-bc04-269194d855e6",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "654e304a-3e06-4539-a856-b59be4d4c14f",
+              "templateId": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "a6ec468a-6b24-4571-a00a-574a08da6869",
+          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
+          "fromTemplate": true,
+          "name": "Archer 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 372,
+                "offsetY": -96,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "f0e2ce86-3329-49fc-ad37-566fc8dec46d",
+              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "6d9adc95-3a75-4729-bfc5-9d276af0f073",
+              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "cc08e3f1-c676-4104-97a2-c512265f5494",
+              "templateId": "e89096db-537d-435e-bc04-269194d855e6",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "8f1501b9-65ce-4048-b41b-d77ee17a8688",
+              "templateId": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "13046b4b-9fb3-4e80-8e9b-8c97e1008bba",
+          "templateId": "388d55c4-0a2a-4cd9-9b65-e1fda31b3e8f",
+          "fromTemplate": true,
+          "name": "Archer 7",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 576,
+                "offsetY": -96,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "5a00a8fb-1d93-48df-a0a1-6e5fcf7fda93",
+              "templateId": "87ee0c79-453e-46fb-8890-e1b1d3509646",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "d4052a92-7712-4f31-b69a-bd6f5a1f91e2",
+              "templateId": "e3e9e11e-e1cc-4d47-ba19-562e865c2848",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "53ccefa3-cd23-4ea1-8bff-1dc57f93b33d",
+              "templateId": "e89096db-537d-435e-bc04-269194d855e6",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "f84e70ff-2130-41d7-9dd0-b4cef2f4ef8e",
+              "templateId": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "dfc05cdb-b245-40e7-bcc7-c28675180f6d",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 684,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "f8cddf07-f3f3-4f8a-93dd-1054644a49f1",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "96b347a5-9860-42b5-9913-180e97db26c1",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "c79c4ba0-f2f6-48f2-843a-c45f1b958854",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "cfe62adf-d0ac-450d-8bc7-b4cdd535d6cd",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "8c64e98a-f52a-4c58-a24f-a7f9e099f075",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 10",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 708,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "b057491f-6923-4b6c-a3fa-abd2fe00546f",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "419187da-fb2d-4675-aad5-1496a62a542e",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "3ada8e96-d65e-49ea-9abc-e9f8c8a12aa3",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "e4421dfc-8daa-4664-8273-8c41d0b03de6",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "a68f2352-4e2b-4519-995e-36ce703d0a13",
+          "templateId": "0b50cfd4-f3e1-4318-a213-bec45a50f5c9",
+          "fromTemplate": true,
+          "name": "Light Fighter 11",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 732,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "bdfbfd99-e7cb-4f2d-ae0f-8a9e669f704c",
+              "templateId": "a2214843-4a5d-4d06-88a0-155f1b81a2e0",
+              "fromTemplate": true,
+              "name": "Enemy Detector",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "28c05269-4b47-4cbb-99bc-42a63a542e26",
+              "templateId": "1326346b-cbd7-4e38-b99d-50cc6ce51770",
+              "fromTemplate": true,
+              "name": "Hit Box",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "0a4852db-dd72-424f-b77d-e6f895edf6f3",
+              "templateId": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+              "fromTemplate": true,
+              "name": "Ground Detector (right)",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "71f1e7c2-32c0-4c4a-bc09-1a8c5f9292ff",
+              "templateId": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+              "fromTemplate": true,
+              "name": "Ground Detector (left)",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -4363,6 +4735,154 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "2e29be16-9bea-4ffe-8bb3-c4712204f61c",
+          "name": "Ground Detector (right)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "68fa2e96-59bf-4b30-95af-c6ed11254e72",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "26e0bc3d-9242-4cb4-920a-43f12aa54619",
+          "name": "Ground Detector (left)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": -1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "68fa2e96-59bf-4b30-95af-c6ed11254e72",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -5638,6 +6158,18 @@
               "distance": 48
             }
           }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "ccb5daeb-f404-45d8-82ba-1df449aa2829",
+                "name": "GhostScript",
+                "options": {}
+              }
+            ]
+          }
         }
       ],
       "children": [
@@ -5704,6 +6236,154 @@
             {
               "name": "HitBox",
               "config": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6cef757c-da91-48a1-a0e4-a6a3b4a0d4f1",
+          "name": "Ground Detector (right)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "687757f9-3ea8-479e-a65b-36c530c99225",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5c4c9c4e-3243-4d8f-8bc0-e83a0b5bd39d",
+          "name": "Ground Detector (left)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": -1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "687757f9-3ea8-479e-a65b-36c530c99225",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
             }
           ],
           "children": []
@@ -6653,6 +7333,154 @@
             {
               "name": "HitBox",
               "config": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e89096db-537d-435e-bc04-269194d855e6",
+          "name": "Ground Detector (right)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "97698514-c515-41d4-af79-f4859240cc23",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "52ea9ef1-02a2-45e5-be2e-38dffcc93b8c",
+          "name": "Ground Detector (left)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": -1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "97698514-c515-41d4-af79-f4859240cc23",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
             }
           ],
           "children": []
@@ -7756,6 +8584,18 @@
         {
           "name": "Ghost",
           "config": {}
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "1fb6839b-0a52-43b8-8269-6d79a00731d9",
+                "name": "GhostScript",
+                "options": {}
+              }
+            ]
+          }
         }
       ],
       "children": [
@@ -7822,6 +8662,154 @@
             {
               "name": "HitBox",
               "config": {}
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9e48dd75-343f-4d38-9678-da8f6cf072a3",
+          "name": "Ground Detector (right)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "5a9dc4e3-eb0c-4d96-80ba-33ec41d69ce2",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "41314248-a958-44b3-ab16-98c043f0b4e4",
+          "name": "Ground Detector (left)",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 0,
+                "height": 0,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "foreground",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 1,
+                  "sizeY": 1,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "GroundDetector",
+              "config": {
+                "direction": -1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "5a9dc4e3-eb0c-4d96-80ba-33ec41d69ce2",
+                    "name": "GroundDetectorScript",
+                    "options": {}
+                  }
+                ]
+              }
             }
           ],
           "children": []
