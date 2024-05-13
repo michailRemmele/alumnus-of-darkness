@@ -1387,7 +1387,7 @@
                       "options": {
                         "blending": "normal",
                         "color": "#fff",
-                        "opacity": 1
+                        "opacity": 0
                       }
                     }
                   }
@@ -1461,7 +1461,7 @@
                       "options": {
                         "blending": "normal",
                         "color": "#ffffff",
-                        "opacity": 1
+                        "opacity": 0
                       }
                     }
                   }
@@ -4784,7 +4784,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -4858,7 +4858,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -6195,7 +6195,7 @@
                 "collider": {
                   "centerX": 0,
                   "centerY": 0,
-                  "radius": 96
+                  "radius": 120
                 }
               }
             },
@@ -6288,7 +6288,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -6362,7 +6362,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -7373,7 +7373,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -7447,7 +7447,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -8621,7 +8621,7 @@
                 "collider": {
                   "centerX": 0,
                   "centerY": 0,
-                  "radius": 96
+                  "radius": 120
                 }
               }
             },
@@ -8702,7 +8702,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -8776,7 +8776,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 1
+                    "opacity": 0
                   }
                 }
               }
@@ -9585,6 +9585,343 @@
           "name": "Parallax",
           "config": {
             "distance": -0.1
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2ac1d2ee-5a8a-4b2d-a4fb-45f7accebf54",
+      "name": "Teleport (from)",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "teleport-from.png",
+            "width": 24,
+            "height": 24,
+            "slice": 6,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "units",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "f64d4697-f326-4537-80f2-7843e1d5b4a9",
+            "states": [
+              {
+                "id": "f64d4697-f326-4537-80f2-7843e1d5b4a9",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1.75,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "6505d335-d433-4ae9-a99c-f9f307012fc5",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "4d19928c-6893-42a6-98ab-95e7533f1220",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "id": "260a1fc4-42a5-4d35-aa92-3d06e0effa15",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "60085f66-0088-45da-98ce-1f83a5d8377b",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "id": "eca9f1e5-9242-4f0f-9cfa-b2616b9b209a",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "353e24e4-5b1b-4880-aeb5-f6a616d12e31",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.9
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4977f906-c373-4eff-bdc5-28017745bdbd",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 3
+                        },
+                        {
+                          "id": "4682ec8e-8347-4de6-bc1c-0e5c4ef23702",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4a51db18-85fe-47cb-9676-3c57a19b77c8",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 4
+                        },
+                        {
+                          "id": "b744c1a0-dcc4-47e6-aa48-187a1d0ad2f7",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.7
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a8706c20-49e7-426b-9433-2531ddaa2bae",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 5
+                        },
+                        {
+                          "id": "a4ad6ec8-51d6-463e-82ef-69f29d4d1b1e",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.6
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d0955ab7-8b4f-4c60-955d-59da42a8948d",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bb07baee-149b-4721-86c6-88874737d4a4",
+      "name": "Teleport (to)",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "teleport-to.png",
+            "width": 24,
+            "height": 24,
+            "slice": 5,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "units",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "f64d4697-f326-4537-80f2-7843e1d5b4a9",
+            "states": [
+              {
+                "id": "f64d4697-f326-4537-80f2-7843e1d5b4a9",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1.5,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "6505d335-d433-4ae9-a99c-f9f307012fc5",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "4d19928c-6893-42a6-98ab-95e7533f1220",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "id": "260a1fc4-42a5-4d35-aa92-3d06e0effa15",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "60085f66-0088-45da-98ce-1f83a5d8377b",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "id": "eca9f1e5-9242-4f0f-9cfa-b2616b9b209a",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "353e24e4-5b1b-4880-aeb5-f6a616d12e31",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.9
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4977f906-c373-4eff-bdc5-28017745bdbd",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 3
+                        },
+                        {
+                          "id": "4682ec8e-8347-4de6-bc1c-0e5c4ef23702",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4a51db18-85fe-47cb-9676-3c57a19b77c8",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 4
+                        },
+                        {
+                          "id": "b744c1a0-dcc4-47e6-aa48-187a1d0ad2f7",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.7
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d0955ab7-8b4f-4c60-955d-59da42a8948d",
+                      "fields": [
+                        {
+                          "id": "752c27b4-6dc3-4477-a19d-ab281b41d3ab",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
           }
         }
       ],

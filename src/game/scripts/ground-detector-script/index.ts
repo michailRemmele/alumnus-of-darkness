@@ -14,7 +14,7 @@ import type { CollisionEnterEvent, CollisionLeaveEvent } from 'remiz/events';
 
 import { GroundDetector } from '../../components';
 
-const DETECTOR_SIZE_X = 12;
+const DETECTOR_SIZE_X = 6;
 const DETECTOR_SIZE_Y = 6;
 
 const OFFSET_X_FACTOR = 1.5;
@@ -54,8 +54,9 @@ export class GroundDetectorScript extends Script {
 
     // TODO:: remove
     const sprite = this.actor.getComponent(Sprite);
-    sprite.width = DETECTOR_SIZE_X;
+    sprite.width = DETECTOR_SIZE_X * 2;
     sprite.height = DETECTOR_SIZE_Y / 3;
+    // sprite.material.options.opacity = 1;
 
     this.actor.addEventListener(CollisionEnter, this.handleCollisionEnter);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);

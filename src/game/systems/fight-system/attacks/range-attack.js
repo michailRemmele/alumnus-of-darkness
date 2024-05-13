@@ -96,7 +96,6 @@ export class RangeAttack extends Attack {
     }
 
     target.dispatchEvent(EventType.Damage, { value: damage });
-    target.dispatchEvent(AddImpulse, { value: this._directionVector.clone() });
 
     this._lifetime = 0;
   };

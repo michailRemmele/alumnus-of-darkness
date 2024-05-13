@@ -5,7 +5,7 @@ import {
   ColliderContainer,
 } from 'remiz';
 // eslint-disable-next-line import/no-unresolved
-import { CollisionEnter, AddImpulse } from 'remiz/events';
+import { CollisionEnter } from 'remiz/events';
 
 import { PLAYER_ID } from '../../../../consts/templates';
 import * as EventType from '../../../events';
@@ -89,7 +89,6 @@ export class MeleeAttack extends Attack {
     }
 
     target.dispatchEvent(EventType.Damage, { value: damage });
-    target.dispatchEvent(AddImpulse, { value: this._directionVector.clone() });
   };
 
   isFinished() {
