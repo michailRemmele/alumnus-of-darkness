@@ -64,7 +64,7 @@ export class ArcherStrategy implements AIStrategy {
     const { actor: enemy } = event;
 
     const enemyHealth = enemy.getComponent(Health);
-    const enemyAI = enemy.getComponent(AI);
+    const enemyAI = enemy.getComponent(AI) as AI | undefined;
 
     if (this.currentEnemy === enemy) {
       return;
@@ -72,11 +72,7 @@ export class ArcherStrategy implements AIStrategy {
     if (!enemyHealth) {
       return;
     }
-    if (
-      (!enemyAI && !this.isEnemy)
-      || (enemyAI?.isEnemy === this.isEnemy)
-      || (this.isEnemy && enemyAI)
-    ) {
+    if (this.isEnemy === Boolean(enemyAI?.isEnemy)) {
       return;
     }
     if (this.currentEnemy?.getComponent(AI)) {

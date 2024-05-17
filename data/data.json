@@ -6195,7 +6195,7 @@
                 "collider": {
                   "centerX": 0,
                   "centerY": 0,
-                  "radius": 120
+                  "radius": 96
                 }
               }
             },
@@ -8621,7 +8621,7 @@
                 "collider": {
                   "centerX": 0,
                   "centerY": 0,
-                  "radius": 120
+                  "radius": 96
                 }
               }
             },

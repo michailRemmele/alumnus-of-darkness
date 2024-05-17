@@ -7,7 +7,7 @@ import { GroundDetector } from '../../../components';
 import type { MovementState } from './movement-state';
 import { IdleState } from './idle-state';
 
-const CAST_TIME = 400;
+const CAST_TIME = 200;
 
 interface BoxCollider {
   sizeX: number

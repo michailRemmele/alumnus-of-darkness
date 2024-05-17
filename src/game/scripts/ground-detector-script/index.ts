@@ -7,7 +7,6 @@ import {
   Transform,
   ColliderContainer,
   RigidBody,
-  Sprite,
 } from 'remiz';
 import { CollisionEnter, CollisionLeave } from 'remiz/events';
 import type { CollisionEnterEvent, CollisionLeaveEvent } from 'remiz/events';
@@ -52,12 +51,6 @@ export class GroundDetectorScript extends Script {
 
     collider.centerY = parentCollider.sizeY / 2 + parentCollider.centerY + DETECTOR_SIZE_Y / 2;
 
-    // TODO:: remove
-    const sprite = this.actor.getComponent(Sprite);
-    sprite.width = DETECTOR_SIZE_X * 2;
-    sprite.height = DETECTOR_SIZE_Y / 3;
-    // sprite.material.options.opacity = 1;
-
     this.actor.addEventListener(CollisionEnter, this.handleCollisionEnter);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
   }
@@ -74,10 +67,6 @@ export class GroundDetectorScript extends Script {
 
       const groundDetector = this.actor.getComponent(GroundDetector);
       groundDetector.isGround = this.groundCounter > 0;
-
-      // TODO:: remove
-      const sprite = this.actor.getComponent(Sprite);
-      sprite.material.options.color = groundDetector.isGround ? '#00ff00' : '#ff0000';
     }
   };
 
@@ -88,10 +77,6 @@ export class GroundDetectorScript extends Script {
 
       const groundDetector = this.actor.getComponent(GroundDetector);
       groundDetector.isGround = this.groundCounter > 0;
-
-      // TODO:: remove
-      const sprite = this.actor.getComponent(Sprite);
-      sprite.material.options.color = groundDetector.isGround ? '#00ff00' : '#ff0000';
     }
   };
 }
