@@ -1,5 +1,4 @@
 import {
-  MathOps,
   Transform,
   ColliderContainer,
 } from 'remiz';
@@ -18,15 +17,16 @@ import {
   AI,
   Weapon,
 } from '../../../components';
+import { IdleState } from '../movement-strategy';
+import type { MovementState } from '../movement-strategy';
+import { WEAPON_RANGE_FACTOR } from '../consts';
+import { getDistance } from '../utils/get-distance';
 
 import { AIStrategy } from './ai-strategy';
 
 const SPAWN_COOLDOWN = 1000;
 const PREPARE_TO_ATTACK_COOLDOWN = 500;
-const MELEE_RADIUS = 24;
 const VERTICAL_LIMIT = 12;
-
-const FOLLOW_DISTANCE = 48;
 
 export class LightFighterStrategy implements AIStrategy {
   private actor: Actor;
@@ -37,6 +37,8 @@ export class LightFighterStrategy implements AIStrategy {
   private currentEnemy: Actor | undefined;
   private isMeleeEnemy: boolean;
   private prepareToAttack: boolean;
+
+  private movementState: MovementState;
 
   constructor(actor: Actor, scene: Scene, isEnemy: boolean) {
     this.actor = actor;
@@ -51,6 +53,8 @@ export class LightFighterStrategy implements AIStrategy {
 
     this.enemyDetector = actor.children.find((child) => child.getComponent(EnemyDetector)) as Actor;
     this.enemyDetector.addEventListener(CollisionStay, this.handleEnemyDetectorCollision);
+
+    this.movementState = new IdleState(this.actor, !this.isEnemy ? this.player : undefined);
   }
 
   destroy(): void {
@@ -61,7 +65,7 @@ export class LightFighterStrategy implements AIStrategy {
     const { actor: enemy } = event;
 
     const enemyHealth = enemy.getComponent(Health);
-    const enemyAI = enemy.getComponent(AI);
+    const enemyAI = enemy.getComponent(AI) as AI | undefined;
 
     if (this.currentEnemy === enemy) {
       return;
@@ -69,7 +73,7 @@ export class LightFighterStrategy implements AIStrategy {
     if (!enemyHealth) {
       return;
     }
-    if ((!enemyAI && !this.isEnemy) || (enemyAI?.isEnemy === this.isEnemy)) {
+    if (this.isEnemy === Boolean(enemyAI?.isEnemy)) {
       return;
     }
     if (this.currentEnemy?.getComponent(AI)) {
@@ -78,11 +82,12 @@ export class LightFighterStrategy implements AIStrategy {
 
     const { offsetY } = this.actor.getComponent(Transform);
     const { offsetY: enemyOffsetY } = enemy.getComponent(Transform);
-    if (Math.abs(offsetY - enemyOffsetY) >= VERTICAL_LIMIT) {
+    if (this.isEnemy && Math.abs(offsetY - enemyOffsetY) >= VERTICAL_LIMIT) {
       return;
     }
 
     this.currentEnemy = enemy;
+    this.movementState.target = enemy;
   };
 
   private updateAggro(): void {
@@ -90,22 +95,16 @@ export class LightFighterStrategy implements AIStrategy {
       return;
     }
 
-    const actorTransform = this.actor.getComponent(Transform);
-    const enemyTransform = this.currentEnemy.getComponent(Transform);
-
     const enemyDetectorCollider = this.enemyDetector.getComponent(ColliderContainer);
 
-    const distance = MathOps.getDistanceBetweenTwoPoints(
-      actorTransform.offsetX,
-      enemyTransform.offsetX,
-      actorTransform.offsetY,
-      enemyTransform.offsetY,
-    );
+    const distance = getDistance(this.actor, this.currentEnemy);
 
     const evadeRange = (enemyDetectorCollider.collider as { radius: number }).radius * 1.5;
 
     if (distance > evadeRange || !this.currentEnemy.getComponent(Health)) {
       this.currentEnemy = undefined;
+      this.movementState.target = !this.isEnemy ? this.player : undefined;
+      this.prepareToAttack = false;
     }
   }
 
@@ -119,17 +118,9 @@ export class LightFighterStrategy implements AIStrategy {
       return;
     }
 
-    const enemyTransform = this.currentEnemy.getComponent(Transform);
-    const actorTransform = this.actor.getComponent(Transform);
+    const distance = getDistance(this.actor, this.currentEnemy);
 
-    const distance = MathOps.getDistanceBetweenTwoPoints(
-      enemyTransform.offsetX,
-      actorTransform.offsetX,
-      enemyTransform.offsetY,
-      actorTransform.offsetY,
-    );
-
-    this.isMeleeEnemy = distance <= MELEE_RADIUS;
+    this.isMeleeEnemy = distance <= weapon.properties.range * WEAPON_RANGE_FACTOR;
 
     if (this.isMeleeEnemy && weapon.cooldownRemaining <= 0) {
       this.cooldown = PREPARE_TO_ATTACK_COOLDOWN;
@@ -162,49 +153,6 @@ export class LightFighterStrategy implements AIStrategy {
     this.prepareToAttack = false;
   }
 
-  private move(): void {
-    if (this.isMeleeEnemy || this.prepareToAttack || this.cooldown > 0) {
-      return;
-    }
-
-    if (!this.currentEnemy) {
-      return;
-    }
-
-    const { offsetX: enemyX } = this.currentEnemy.getComponent(Transform);
-    const { offsetX } = this.actor.getComponent(Transform);
-
-    this.actor.dispatchEvent(
-      EventType.Move,
-      { direction: enemyX > offsetX ? 1 : -1 },
-    );
-  }
-
-  private follow(): void {
-    if (this.currentEnemy) {
-      return;
-    }
-
-    const playerTransform = this.player.getComponent(Transform);
-    const actorTransform = this.actor.getComponent(Transform);
-
-    const distance = MathOps.getDistanceBetweenTwoPoints(
-      playerTransform.offsetX,
-      actorTransform.offsetX,
-      playerTransform.offsetY,
-      actorTransform.offsetY,
-    );
-
-    if (distance <= FOLLOW_DISTANCE) {
-      return;
-    }
-
-    this.actor.dispatchEvent(
-      EventType.Move,
-      { direction: playerTransform.offsetX > actorTransform.offsetX ? 1 : -1 },
-    );
-  }
-
   update(deltaTime: number): void {
     this.cooldown -= deltaTime;
 
@@ -212,9 +160,8 @@ export class LightFighterStrategy implements AIStrategy {
       this.updateAggro();
       this.updateMeleeEnemies();
       this.attack();
-      this.move();
-    } else if (!this.isEnemy) {
-      this.follow();
     }
+
+    this.movementState = this.movementState.update(deltaTime);
   }
 }

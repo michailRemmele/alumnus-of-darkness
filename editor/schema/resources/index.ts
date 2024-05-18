@@ -5,10 +5,17 @@ import {
   MoonScript,
   PlatformScript,
   CameraScript,
+  GroundDetectorScript,
+  GhostScript,
 } from '../../../src/game/scripts';
 
 import {
-  playerScript, moonScript, platformScript, cameraScript,
+  playerScript,
+  moonScript,
+  platformScript,
+  cameraScript,
+  groundDetectorScript,
+  ghostScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -17,5 +24,7 @@ export const resourcesSchema = {
     [MoonScript.scriptName]: moonScript,
     [PlatformScript.scriptName]: platformScript,
     [CameraScript.scriptName]: cameraScript,
+    [GroundDetectorScript.scriptName]: groundDetectorScript,
+    [GhostScript.scriptName]: ghostScript,
   },
 };
