@@ -1730,7 +1730,7 @@
                   "type": "basic",
                   "options": {
                     "blending": "normal",
-                    "color": "#2f4063",
+                    "color": "#32375b",
                     "opacity": 1
                   }
                 }
@@ -1778,7 +1778,7 @@
                 ],
                 "flipX": false,
                 "flipY": false,
-                "sortingLayer": "background-3",
+                "sortingLayer": "background-2",
                 "fit": "stretch",
                 "material": {
                   "type": "basic",
@@ -2470,8 +2470,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -192,
-                "offsetY": -48,
+                "offsetX": -182,
+                "offsetY": -39,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -2530,8 +2530,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 0,
-                "offsetY": -36,
+                "offsetX": 1,
+                "offsetY": -34,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -3368,6 +3368,46 @@
               "children": []
             }
           ]
+        },
+        {
+          "id": "4c55a110-0fd1-4a78-8ec9-397aac334c8c",
+          "templateId": "f14dfd14-d117-41e9-95d0-f8fbfa307d7d",
+          "fromTemplate": true,
+          "name": "ForestBg-2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 52,
+                "offsetY": -50,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1.5,
+                "scaleY": 1.5
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a4ce4f9a-b42d-45a9-a8f6-bf3d77862e85",
+          "templateId": "96784f10-d3dd-45c3-8c21-5a79a2afbb19",
+          "fromTemplate": true,
+          "name": "ForestBg-1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -1,
+                "offsetY": -56,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1.5,
+                "scaleY": 1.5
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -9213,12 +9253,6 @@
             "scaleX": 1,
             "scaleY": 1
           }
-        },
-        {
-          "name": "Parallax",
-          "config": {
-            "distance": 0.05
-          }
         }
       ],
       "children": []
@@ -9365,8 +9399,8 @@
           "name": "Sprite",
           "config": {
             "src": "graveyard.png",
-            "width": 96,
-            "height": 48,
+            "width": 64,
+            "height": 32,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -9375,22 +9409,16 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "background-3",
+            "sortingLayer": "background-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
-                "opacity": 1
+                "opacity": 0.9
               }
             }
-          }
-        },
-        {
-          "name": "Parallax",
-          "config": {
-            "distance": 0.05
           }
         }
       ],
@@ -9435,12 +9463,6 @@
                 "opacity": 1
               }
             }
-          }
-        },
-        {
-          "name": "Parallax",
-          "config": {
-            "distance": 0.05
           }
         }
       ],
@@ -9926,6 +9948,106 @@
         }
       ],
       "children": []
+    },
+    {
+      "id": "f14dfd14-d117-41e9-95d0-f8fbfa307d7d",
+      "name": "ForestBg-2",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "forest-bg-2.png",
+            "width": 2400,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-3",
+            "fit": "repeat",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 0.9
+              }
+            }
+          }
+        },
+        {
+          "name": "Parallax",
+          "config": {
+            "distance": 0.3
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "96784f10-d3dd-45c3-8c21-5a79a2afbb19",
+      "name": "ForestBg-1",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "forest-bg-1.png",
+            "width": 2400,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-3.5",
+            "fit": "repeat",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 0.6
+              }
+            }
+          }
+        },
+        {
+          "name": "Parallax",
+          "config": {
+            "distance": 0.15
+          }
+        }
+      ],
+      "children": []
     }
   ],
   "loaders": [],
@@ -9939,6 +10061,7 @@
         "background-after-sky",
         "background-2",
         "background-3",
+        "background-3.5",
         "background-4",
         "decorations",
         "platforms",
