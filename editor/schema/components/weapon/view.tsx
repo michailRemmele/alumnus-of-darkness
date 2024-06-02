@@ -1,15 +1,18 @@
 import { useMemo } from 'react';
+import type { FC } from 'react';
 import {
   Widget,
   useConfig,
 } from 'remiz-editor';
+import type { WidgetProps } from 'remiz-editor';
+import type { TemplateConfig } from 'remiz';
 
-export const WeaponWidget = ({
+export const WeaponWidget: FC<WidgetProps> = ({
   fields,
   path,
   references,
 }) => {
-  const templates = useConfig('templates');
+  const templates = useConfig('templates') as Array<TemplateConfig>;
 
   const extendedReferences = useMemo(() => ({
     ...references,

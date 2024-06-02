@@ -20,7 +20,9 @@
   "components.movement.speed.title": "Speed",
 
   "components.resurrectable.title": "Resurrectable",
-  "components.resurrectable.area.title": "Area",
+  "components.resurrectable.creature.title": "Creature",
+  "components.resurrectable.cost.title": "Cost",
+  "components.resurrectable.permanent.title": "Permanent",
 
   "components.enemyDetector.title": "Enemy Detector",
 
@@ -30,6 +32,7 @@
 
   "components.mana.title": "Mana",
   "components.mana.points.title": "Points",
+  "components.mana.refillRate.title": "Refill Rate",
 
   "components.spellbook.title": "Spellbook",
 

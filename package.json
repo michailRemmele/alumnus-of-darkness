@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "npx cross-env NODE_ENV=development webpack-dev-server",
+    "start": "env NODE_ENV=development webpack-dev-server",
     "start:editor": "npx remiz-editor",
-    "build": "npx cross-env NODE_ENV=production webpack"
+    "build": "env NODE_ENV=production webpack"
   },
   "dependencies": {
     "antd": "5.5.2",

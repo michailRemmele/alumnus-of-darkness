@@ -1,10 +1,10 @@
 import {
   ActorCollection,
   System,
+  ColliderContainer,
 } from 'remiz';
 import type {
   SystemOptions,
-  ActorSpawner,
 } from 'remiz';
 
 import {
@@ -14,15 +14,15 @@ import {
   Weapon,
   Ghost,
   HitBox,
+  Resurrectable,
 } from '../../components';
 import * as EventType from '../../events';
-import { RESURRECTION_AREA_ID } from '../../../consts/templates';
 
 const COMPONENTS_TO_DELETE = [Health, Movement, AI, Weapon];
+const RESURRECTION_RADIUS = 24;
 
 export class HealthSystem extends System {
   private actorCollection: ActorCollection;
-  private actorSpawner: ActorSpawner;
 
   constructor(options: SystemOptions) {
     super();
@@ -30,7 +30,6 @@ export class HealthSystem extends System {
     this.actorCollection = new ActorCollection(options.scene, {
       components: [Health],
     });
-    this.actorSpawner = options.actorSpawner;
   }
 
   update(): void {
@@ -39,8 +38,18 @@ export class HealthSystem extends System {
 
       if (points <= 0) {
         if (!actor.getComponent(Ghost) && actor.getComponent(AI)) {
-          const resurrectionArea = this.actorSpawner.spawn(RESURRECTION_AREA_ID);
-          actor.appendChild(resurrectionArea);
+          const colliderContainer = new ColliderContainer({
+            type: 'circleCollider',
+            collider: {
+              radius: RESURRECTION_RADIUS,
+              centerX: 0,
+              centerY: 0,
+            },
+          });
+          const resurrectionArea = actor.children.find(
+            (child) => child.getComponent(Resurrectable),
+          );
+          resurrectionArea?.setComponent(colliderContainer);
         }
 
         COMPONENTS_TO_DELETE.forEach((Component) => actor.removeComponent(Component));

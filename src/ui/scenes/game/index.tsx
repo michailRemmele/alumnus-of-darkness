@@ -19,7 +19,7 @@ import { isTouchDevice } from '../../utils/is-touch-device';
 import {
   ThumbStick,
   HealthBar,
-  // ManaBar,
+  ManaBar,
   ResurrectButton,
   TouchControls,
 } from './components';
@@ -82,7 +82,7 @@ export const Game: FC = () => {
         <>
           <div className="game__header">
             <HealthBar />
-            {/* <ManaBar /> */}
+            <ManaBar />
           </div>
           <div className="game__footer">
             {isTouchDevice() ? (
