@@ -1320,6 +1320,11 @@
                         "id": "a87fa129-9550-47e1-bce5-031568db0909",
                         "name": "CameraScript",
                         "options": {}
+                      },
+                      {
+                        "id": "b4d8c526-8fad-485f-b733-f6ebd6ac7334",
+                        "name": "CloudsScript",
+                        "options": {}
                       }
                     ]
                   }
@@ -1730,7 +1735,7 @@
                   "type": "basic",
                   "options": {
                     "blending": "normal",
-                    "color": "#32375b",
+                    "color": "#5e5a86",
                     "opacity": 1
                   }
                 }
@@ -1756,8 +1761,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 150,
-                "offsetY": -54,
+                "offsetX": 144,
+                "offsetY": -84,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1.5,
@@ -1768,8 +1773,8 @@
               "name": "Sprite",
               "config": {
                 "src": "clouds.png",
-                "width": 2400,
-                "height": 120,
+                "width": 2592,
+                "height": 144,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -1785,7 +1790,7 @@
                   "options": {
                     "blending": "normal",
                     "color": "#ffffff",
-                    "opacity": 0.5
+                    "opacity": 1
                   }
                 }
               }
@@ -1793,7 +1798,7 @@
             {
               "name": "Parallax",
               "config": {
-                "distance": 0.9
+                "distance": 1
               }
             }
           ],
@@ -1881,23 +1886,12 @@
                 "sortingLayer": "background-after-sky",
                 "fit": "stretch",
                 "material": {
-                  "type": "lightsensitive",
+                  "type": "basic",
                   "options": {
                     "blending": "normal",
                     "color": "#fff",
-                    "opacity": 0.75
+                    "opacity": 1
                   }
-                }
-              }
-            },
-            {
-              "name": "Light",
-              "config": {
-                "type": "point",
-                "options": {
-                  "color": "#ffffec",
-                  "intensity": 0.75,
-                  "distance": 144
                 }
               }
             },
@@ -9985,7 +9979,7 @@
               "options": {
                 "blending": "normal",
                 "color": "#fff",
-                "opacity": 0.9
+                "opacity": 1
               }
             }
           }
@@ -10035,7 +10029,7 @@
               "options": {
                 "blending": "normal",
                 "color": "#fff",
-                "opacity": 0.6
+                "opacity": 1
               }
             }
           }
@@ -10044,6 +10038,138 @@
           "name": "Parallax",
           "config": {
             "distance": 0.15
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "da7c6fd6-e644-4aaa-9f52-7d81c846d1f5",
+      "name": "Cloud 1",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "cloud-1.png",
+            "width": 86,
+            "height": 23,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-3",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a2f9541b-8872-4c01-b473-96ff13a97a0b",
+      "name": "Cloud 2",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "cloud-2.png",
+            "width": 84,
+            "height": 32,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-3",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d2212012-c3ea-418e-adbd-799d45ef2cdb",
+      "name": "Cloud 3",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "cloud-3.png",
+            "width": 59,
+            "height": 23,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-3",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
           }
         }
       ],

@@ -7,6 +7,7 @@ import {
   CameraScript,
   GroundDetectorScript,
   GhostScript,
+  CloudsScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -16,6 +17,7 @@ import {
   cameraScript,
   groundDetectorScript,
   ghostScript,
+  cloudsScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -26,5 +28,6 @@ export const resourcesSchema = {
     [CameraScript.scriptName]: cameraScript,
     [GroundDetectorScript.scriptName]: groundDetectorScript,
     [GhostScript.scriptName]: ghostScript,
+    [CloudsScript.scriptName]: cloudsScript,
   },
 };

@@ -4,3 +4,4 @@ export { PlatformScript } from './platform-script';
 export { CameraScript } from './camera-script';
 export { GroundDetectorScript } from './ground-detector-script';
 export { GhostScript } from './ghost-script';
+export { CloudsScript } from './clouds-script';
