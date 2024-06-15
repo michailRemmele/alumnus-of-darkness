@@ -16,11 +16,17 @@ export class CameraScript extends Script {
     super();
 
     this.actor = options.actor;
+
+    this.updateZoom();
+  }
+
+  private updateZoom(): void {
+    const camera = this.actor.getComponent(Camera);
+    camera.zoom = camera.windowSizeY / VIEWPORT_HEIGHT;
   }
 
   update(): void {
-    const camera = this.actor.getComponent(Camera);
-    camera.zoom = camera.windowSizeY / VIEWPORT_HEIGHT;
+    this.updateZoom();
   }
 }
 
