@@ -36,6 +36,9 @@
 
   "components.spellbook.title": "Spellbook",
 
+  "components.ui.title": "UI",
+  "components.ui.avatarUrl.title": "Avatar URL",
+
   "components.weapon.title": "Weapon",
   "components.weapon.type.title": "Type",
   "components.weapon.types.melee.title": "Melee",
@@ -51,10 +54,8 @@
   "components.groundDetector.direction.title": "Direction",
 
   "systems.movementSystem.title": "Movement System",
-  "systems.healthSystem.title": "Health System",
   "systems.aiSystem.title": "AI System",
   "systems.fightSystem.title": "Fight System",
-  "systems.damageSystem.title": "Damage System",
   "systems.reaper.title": "Reaper",
   "systems.thumbStickController.title": "Thumb Stick Controller"
 }

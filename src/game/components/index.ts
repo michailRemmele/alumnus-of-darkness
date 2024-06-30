@@ -10,3 +10,4 @@ export { Mana } from './mana';
 export { Spellbook } from './spellbook';
 export { ThumbStickControl } from './thumb-stick-control';
 export { GroundDetector } from './ground-detector';
+export { UI } from './ui';

@@ -22,6 +22,7 @@ import {
   ManaBar,
   ResurrectButton,
   TouchControls,
+  MinionBar,
 } from './components';
 import './style.css';
 
@@ -83,6 +84,7 @@ export const Game: FC = () => {
           <div className="game__header">
             <HealthBar />
             <ManaBar />
+            <MinionBar />
           </div>
           <div className="game__footer">
             {isTouchDevice() ? (

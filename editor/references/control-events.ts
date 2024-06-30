@@ -5,6 +5,7 @@ import {
   MoveJump,
   ResurrectInput,
   SummonInput,
+  SelectMinion,
 } from '../../src/game/events';
 
 export const controlEventsReference: Reference = {
@@ -13,5 +14,6 @@ export const controlEventsReference: Reference = {
     MoveJump,
     ResurrectInput,
     SummonInput,
+    SelectMinion,
   ].map((value) => ({ title: value, value })),
 };

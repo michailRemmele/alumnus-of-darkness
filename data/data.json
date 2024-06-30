@@ -96,14 +96,6 @@
           "options": {}
         },
         {
-          "name": "DamageSystem",
-          "options": {}
-        },
-        {
-          "name": "HealthSystem",
-          "options": {}
-        },
-        {
           "name": "Reaper",
           "options": {}
         },
@@ -356,6 +348,51 @@
                         "name": "direction",
                         "type": "number",
                         "value": -1
+                      }
+                    ]
+                  },
+                  {
+                    "id": "548dbacd-da17-4661-8fd9-4176663cc25a",
+                    "key": "Digit1",
+                    "pressed": true,
+                    "keepEmit": false,
+                    "eventType": "SelectMinion",
+                    "attrs": [
+                      {
+                        "id": "c3921c16-e1b7-4c90-acc5-46819fed26cd",
+                        "name": "index",
+                        "type": "number",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1543ccb3-66fe-46e1-905e-1384f037f666",
+                    "key": "Digit2",
+                    "pressed": true,
+                    "keepEmit": false,
+                    "eventType": "SelectMinion",
+                    "attrs": [
+                      {
+                        "id": "0f7904fa-34f3-4164-bdbc-33877e21c4b6",
+                        "name": "index",
+                        "type": "number",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "id": "eb3a1f1d-0fb7-4830-8dfc-0ba182ee6d10",
+                    "key": "Digit3",
+                    "pressed": true,
+                    "keepEmit": false,
+                    "eventType": "SelectMinion",
+                    "attrs": [
+                      {
+                        "id": "a799b9b2-25e6-40bd-b02e-17f8bda64f17",
+                        "name": "index",
+                        "type": "number",
+                        "value": 2
                       }
                     ]
                   }
@@ -873,7 +910,7 @@
                     "id": "ba399ec1-7b13-40d5-87e2-286e244d339f",
                     "name": "Run",
                     "type": "group",
-                    "speed": 0.5,
+                    "speed": 0.75,
                     "transitions": [
                       {
                         "id": "83b84a24-688c-4ecd-b61e-38df41d7cc31",
@@ -2077,106 +2114,6 @@
           "children": []
         },
         {
-          "id": "8072d071-230a-41de-8e12-afba0d11cdac",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -942,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "2401581a-b1a4-4a35-a583-667f1edc2761",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 1",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -630,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "2f831865-ddde-4532-b0db-fa4ad26300e8",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 2",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -462,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "3a5942ae-b0a0-4630-a45d-7ab91c9928f2",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 3",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -114,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "4a580dd4-0522-488e-a889-25372cf77ab0",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 4",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 222,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
           "id": "b454d5ed-ffe1-44d5-86e7-da215324f0b6",
           "templateId": "f7a6535e-94b7-43f0-85db-d8a9a2218189",
           "fromTemplate": true,
@@ -2227,66 +2164,6 @@
               "config": {
                 "offsetX": 792,
                 "offsetY": -36,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "5a5ddd54-0063-49f4-89eb-594035d5ee02",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 5",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 510,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "2fe52f84-ca6e-4d4a-bdb0-5a345650a60d",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 6",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 606,
-                "offsetY": -42,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "1ba4819f-220f-4079-a53c-d5a090065716",
-          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
-          "fromTemplate": true,
-          "name": "Lantern 1 7",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 870,
-                "offsetY": -42,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -3518,6 +3395,238 @@
               "children": []
             }
           ]
+        },
+        {
+          "id": "2a8b37d2-6494-429d-983a-b65ce061c5fa",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 8",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -942,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "612454c6-852b-4254-8dcb-a414fe245a8a",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "ExtraLight",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "97036544-1958-40fa-a715-cbc86fc8027e",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 8",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -642,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "0ba375c5-04d9-4b46-a63a-e2aee42080ea",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "fb6d85ba-6b1e-47bc-95bb-bcde1a20476a",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -462,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "15557e32-8be0-406d-8917-9de630c7808e",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "c9cf8f98-ecf0-456c-bdca-3030beb1c6c6",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 10",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -114,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "bc1a3dff-8e82-4c02-b4c3-770725858275",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "bec0280e-f6b9-444f-af45-c0492dbc3507",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 11",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 222,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "e71180ac-8c20-4071-baad-5fb931d8a77e",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "e68ca823-8669-47bc-a26d-8e3a61b006a7",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 12",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 510,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "ea4f9e4e-bdcf-4544-86bd-c1fcfd650b07",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "98badc51-2858-4887-b304-8fd85e1e573c",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 13",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 606,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "4f98fb0a-a7bf-4bdb-8543-c9cb9d84915b",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "92d43a5e-1215-4eee-9c21-33dfd7d96b40",
+          "templateId": "3a4f2848-d833-4d71-aa0d-8d0b69fddc86",
+          "fromTemplate": true,
+          "name": "Lantern 1 14",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 870,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "db09da03-eda1-43dc-8097-c461a470791b",
+              "templateId": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+              "fromTemplate": true,
+              "name": "Light",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -4464,7 +4573,7 @@
                 "id": "f7e5ae49-245a-40f1-8e75-d97dd1581a98",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
@@ -5362,7 +5471,7 @@
             "sortingLayer": "units",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -5922,7 +6031,7 @@
                       ],
                       "looped": false
                     },
-                    "x": 1
+                    "x": -1
                   }
                 ],
                 "pickMode": "1D",
@@ -5934,7 +6043,7 @@
                 "id": "f7e5ae49-245a-40f1-8e75-d97dd1581a98",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
@@ -6312,6 +6421,12 @@
                 "options": {}
               }
             ]
+          }
+        },
+        {
+          "name": "UI",
+          "config": {
+            "avatarUrl": "./images/light-fighter-avatar.png"
           }
         }
       ],
@@ -7043,7 +7158,7 @@
                       ],
                       "looped": false
                     },
-                    "x": 1
+                    "x": -1
                   }
                 ],
                 "pickMode": "1D",
@@ -7055,7 +7170,7 @@
                 "id": "f7e5ae49-245a-40f1-8e75-d97dd1581a98",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
@@ -7688,7 +7803,7 @@
             "sortingLayer": "",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -8382,7 +8497,7 @@
                       ],
                       "looped": false
                     },
-                    "x": 1
+                    "x": -1
                   }
                 ],
                 "pickMode": "1D",
@@ -8394,7 +8509,7 @@
                 "id": "f7e5ae49-245a-40f1-8e75-d97dd1581a98",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
@@ -8764,6 +8879,12 @@
                 "options": {}
               }
             ]
+          }
+        },
+        {
+          "name": "UI",
+          "config": {
+            "avatarUrl": "./images/archer-avatar.png"
           }
         }
       ],
@@ -9217,7 +9338,7 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "lantern-1.png",
+            "src": "lamp-post.png",
             "width": 36,
             "height": 36,
             "slice": 1,
@@ -9231,7 +9352,7 @@
             "sortingLayer": "decorations",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -9239,20 +9360,39 @@
               }
             }
           }
-        },
-        {
-          "name": "Light",
-          "config": {
-            "type": "point",
-            "options": {
-              "color": "#ffa700",
-              "intensity": 1,
-              "distance": 48
-            }
-          }
         }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "1a9f1cf2-e20d-42c6-9e90-557293b13047",
+          "name": "Light",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 10,
+                "offsetY": -5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "point",
+                "options": {
+                  "color": "#fff68d",
+                  "intensity": 1.25,
+                  "distance": 48
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     },
     {
       "id": "f7a6535e-94b7-43f0-85db-d8a9a2218189",
@@ -10351,7 +10491,7 @@
     },
     {
       "id": "e119baac-a056-465e-b2a3-1aeba5ce5bdd",
-      "name": "Zombie",
+      "name": "Skeleton",
       "components": [
         {
           "name": "Transform",
@@ -10367,10 +10507,10 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "zombie.png",
+            "src": "skeleton.png",
             "width": 24,
             "height": 24,
-            "slice": 12,
+            "slice": 16,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -10381,7 +10521,7 @@
             "sortingLayer": "units",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -10428,7 +10568,7 @@
         {
           "name": "Animatable",
           "config": {
-            "initialState": "444a673a-69ce-4d5b-a620-b9e86ca215b7",
+            "initialState": "26aef05d-cc28-49a2-8af0-8a6584713015",
             "states": [
               {
                 "id": "444a673a-69ce-4d5b-a620-b9e86ca215b7",
@@ -10656,12 +10796,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": false
-                            },
-                            {
-                              "id": "6f5c9445-fe87-4de3-b8ed-4c6550692943",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.75
                             }
                           ]
                         },
@@ -10679,12 +10813,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": false
-                            },
-                            {
-                              "id": "577abfe1-df6a-46e1-91f9-2eef423e0d29",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.5
                             }
                           ]
                         },
@@ -10702,12 +10830,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": false
-                            },
-                            {
-                              "id": "e5cc0853-2ae6-4990-872a-4e6332fe3a52",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.25
                             }
                           ]
                         },
@@ -10728,7 +10850,7 @@
                             },
                             {
                               "id": "e5cc0853-2ae6-4990-872a-4e6332fe3a52",
-                              "name": "components.Sprite.material.options.opacity",
+                              "name": "components.Light.options.intensity",
                               "type": "number",
                               "value": 0
                             }
@@ -10758,12 +10880,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": true
-                            },
-                            {
-                              "id": "43cab345-7091-4a97-b263-3c5d1610c274",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.75
                             }
                           ]
                         },
@@ -10781,12 +10897,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": true
-                            },
-                            {
-                              "id": "66b7e11a-95f7-41ab-8ff0-ee6f366fdc48",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.5
                             }
                           ]
                         },
@@ -10804,12 +10914,6 @@
                               "name": "components.Sprite.flipX",
                               "type": "boolean",
                               "value": true
-                            },
-                            {
-                              "id": "09d74a29-5b7a-4118-99f9-975953240ce7",
-                              "name": "components.Sprite.material.options.opacity",
-                              "type": "number",
-                              "value": 0.25
                             }
                           ]
                         },
@@ -10830,7 +10934,7 @@
                             },
                             {
                               "id": "09d74a29-5b7a-4118-99f9-975953240ce7",
-                              "name": "components.Sprite.material.options.opacity",
+                              "name": "components.Light.options.intensity",
                               "type": "number",
                               "value": 0
                             }
@@ -10941,7 +11045,7 @@
                       ],
                       "looped": false
                     },
-                    "x": 1
+                    "x": -1
                   }
                 ],
                 "pickMode": "1D",
@@ -10953,7 +11057,7 @@
                 "id": "f7e5ae49-245a-40f1-8e75-d97dd1581a98",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
@@ -11284,6 +11388,182 @@
                 "pickProps": {
                   "x": "components.Movement.viewDirection"
                 }
+              },
+              {
+                "id": "26aef05d-cc28-49a2-8af0-8a6584713015",
+                "name": "Awake",
+                "type": "group",
+                "speed": 1,
+                "transitions": [
+                  {
+                    "id": "34f6f83d-16ab-49c0-acfd-0ce690c2e006",
+                    "state": "444a673a-69ce-4d5b-a620-b9e86ca215b7",
+                    "time": 1,
+                    "conditions": []
+                  }
+                ],
+                "substates": [
+                  {
+                    "id": "2b2d905b-bcd5-4b00-9c10-a7bb15315db1",
+                    "name": "Right",
+                    "timeline": {
+                      "frames": [
+                        {
+                          "id": "a1982c13-0b08-430e-8841-c87797aa9094",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 12
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "64aba53b-65ee-4fe0-a186-fe68232e3a2e",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 13
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "451e7293-2755-41b8-ae85-bfb8441099f8",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 14
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "b0efd26f-5367-4866-914c-43803ae2998d",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 15
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        }
+                      ],
+                      "looped": true
+                    },
+                    "x": 1
+                  },
+                  {
+                    "id": "ab370117-ba15-410d-a674-43cfc4efface",
+                    "name": "Left",
+                    "timeline": {
+                      "frames": [
+                        {
+                          "id": "a1982c13-0b08-430e-8841-c87797aa9094",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 12
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "64aba53b-65ee-4fe0-a186-fe68232e3a2e",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 13
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "451e7293-2755-41b8-ae85-bfb8441099f8",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 14
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "4c418d43-395d-4406-af29-7b55e3b00f64",
+                          "fields": [
+                            {
+                              "id": "7f2471e7-48de-4719-b647-134497ac41b3",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 15
+                            },
+                            {
+                              "id": "fa59d3b2-e7e7-4945-998a-ee00e386977d",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        }
+                      ],
+                      "looped": true
+                    },
+                    "x": -1
+                  }
+                ],
+                "pickMode": "1D",
+                "pickProps": {
+                  "x": "components.Movement.viewDirection"
+                }
               }
             ]
           }
@@ -11331,6 +11611,12 @@
                 "options": {}
               }
             ]
+          }
+        },
+        {
+          "name": "UI",
+          "config": {
+            "avatarUrl": "./images/skeleton-avatar.png"
           }
         }
       ],

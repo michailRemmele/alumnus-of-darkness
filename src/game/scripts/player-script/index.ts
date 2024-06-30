@@ -10,7 +10,9 @@ import { CollisionEnter, CollisionLeave } from 'remiz/events';
 import type { CollisionEnterEvent, CollisionLeaveEvent } from 'remiz/events';
 
 import * as EventType from '../../events';
+import type { SelectMinionEvent } from '../../events';
 import { Resurrectable, Spellbook, Mana } from '../../components';
+import { getAlignedTransformY } from '../../utils/get-aligned-transform-y';
 
 const RESURRECT_COOLDOWN = 500;
 const SUMMON_COOLDOWN = 2000;
@@ -21,7 +23,6 @@ export class PlayerScript extends Script {
   private actor: Actor;
   private actorSpawner: ActorSpawner;
   private canResurrect: Array<Actor>;
-  private activeGhosts: Array<Actor>;
   private resurrectCooldown: number;
   private summonCooldown: number;
 
@@ -32,7 +33,6 @@ export class PlayerScript extends Script {
     this.actor = options.actor;
     this.actorSpawner = options.actorSpawner;
     this.canResurrect = [];
-    this.activeGhosts = [];
     this.resurrectCooldown = 0;
     this.summonCooldown = 0;
 
@@ -40,22 +40,37 @@ export class PlayerScript extends Script {
     this.actor.addEventListener(CollisionLeave, this.handleCannotResurrect);
     this.actor.addEventListener(EventType.ResurrectInput, this.handleResurrect);
     this.actor.addEventListener(EventType.SummonInput, this.handleSummon);
+
+    this.scene.addEventListener(EventType.SelectMinion, this.handleSelectMinion);
   }
 
   destroy(): void {
     this.actor.removeEventListener(CollisionEnter, this.handleCanResurrect);
     this.actor.removeEventListener(CollisionLeave, this.handleCannotResurrect);
+    this.actor.removeEventListener(EventType.ResurrectInput, this.handleResurrect);
     this.actor.removeEventListener(EventType.SummonInput, this.handleSummon);
+
+    this.scene.removeEventListener(EventType.SelectMinion, this.handleSelectMinion);
   }
 
+  private handleSelectMinion = (event: SelectMinionEvent): void => {
+    const spellbook = this.actor.getComponent(Spellbook);
+
+    if (event.index < spellbook.activeMinions.length) {
+      spellbook.selectedGhost = spellbook.activeMinions[event.index].id;
+    }
+  };
+
   private handleSummon = (): void => {
-    if (!this.activeGhosts.length || this.summonCooldown > 0) {
+    const spellbook = this.actor.getComponent(Spellbook);
+
+    if (!spellbook.activeMinions.length || this.summonCooldown > 0) {
       return;
     }
 
     const playerTransform = this.actor.getComponent(Transform);
 
-    this.activeGhosts.forEach((ghost) => {
+    spellbook.activeMinions.forEach((ghost) => {
       const ghostTransform = ghost.getComponent(Transform);
 
       ghostTransform.offsetX = playerTransform.offsetX;
@@ -121,7 +136,7 @@ export class PlayerScript extends Script {
     const ghostTransform = ghost.getComponent(Transform);
 
     ghostTransform.offsetX = corpseTransform.offsetX;
-    ghostTransform.offsetY = corpseTransform.offsetY;
+    ghostTransform.offsetY = getAlignedTransformY(ghost, corpse);
 
     if (!resurrectable.permanent && corpse.parent instanceof Actor) {
       corpse.parent?.remove();
@@ -132,18 +147,22 @@ export class PlayerScript extends Script {
 
   private handleGhostDeath = (event: ActorEvent): void => {
     const { target } = event;
-    this.activeGhosts = this.activeGhosts.filter((ghost) => ghost !== target);
+
+    const spellbook = this.actor.getComponent(Spellbook);
+    spellbook.activeMinions = spellbook.activeMinions.filter((ghost) => ghost !== target);
     target.removeEventListener(EventType.Kill, this.handleGhostDeath);
   };
 
   private spawnGhost(id: string): Actor {
-    if (this.activeGhosts.length >= MAX_GHOSTS) {
-      const ghost = this.activeGhosts.shift();
+    const spellbook = this.actor.getComponent(Spellbook);
+
+    if (spellbook.activeMinions.length >= MAX_GHOSTS) {
+      const ghost = spellbook.activeMinions.shift();
       ghost?.dispatchEvent(EventType.Kill);
     }
 
     const ghost = this.actorSpawner.spawn(id);
-    this.activeGhosts.push(ghost);
+    spellbook.activeMinions.push(ghost);
     ghost.addEventListener(EventType.Kill, this.handleGhostDeath);
 
     this.scene.appendChild(ghost);
