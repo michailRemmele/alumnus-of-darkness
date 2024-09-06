@@ -1,4 +1,5 @@
 import { ScriptSystem } from 'remiz';
+import { EffectsSystem } from 'remiz-game-systems';
 
 import {
   PlayerScript,
@@ -19,6 +20,7 @@ import {
   ghostScript,
   cloudsScript,
 } from './script-system';
+import { effectsSystem } from './effects-system';
 
 export const resourcesSchema = {
   [ScriptSystem.systemName]: {
@@ -30,4 +32,5 @@ export const resourcesSchema = {
     [GhostScript.scriptName]: ghostScript,
     [CloudsScript.scriptName]: cloudsScript,
   },
+  [EffectsSystem.systemName]: effectsSystem,
 };

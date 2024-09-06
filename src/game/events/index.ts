@@ -7,7 +7,9 @@ export const Teleport = 'Teleport';
 export const ResurrectInput = 'ResurrectInput';
 export const Resurrect = 'Resurrect';
 export const SummonInput = 'SummonInput';
+export const HealInput = 'HealInput';
 export const Summon = 'Summon';
+export const Heal = 'Heal';
 export const Kill = 'Kill';
 export const Attack = 'Attack';
 export const Damage = 'Damage';
@@ -24,6 +26,7 @@ export type ThumbStickInputEvent = ActorEvent<{ x: number; y: number }>;
 export type TeleportEvent = ActorEvent<{ x: number; y: number }>;
 export type AttackEvent = ActorEvent<{ x: number; y: number }>;
 export type DamageEvent = ActorEvent<{ value: number }>;
+export type HealEvent = ActorEvent<{ value: number }>;
 
 export type SelectMinionEvent = SceneEvent<{ index: number }>;
 
@@ -35,8 +38,10 @@ declare module 'remiz' {
     [Teleport]: TeleportEvent
     [ResurrectInput]: ActorEvent
     [SummonInput]: ActorEvent
+    [HealInput]: ActorEvent
     [Resurrect]: ActorEvent
     [Summon]: ActorEvent
+    [Heal]: ActorEvent
     [Kill]: ActorEvent
     [Attack]: AttackEvent
     [Damage]: DamageEvent

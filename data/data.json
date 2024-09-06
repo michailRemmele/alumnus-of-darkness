@@ -9,8 +9,12 @@
           "options": {
             "windowNodeId": "root",
             "initialCamera": "02919f0d-4d24-4e4f-81c5-ffc6c43a3c34",
-            "scaleSensitivity": 1
+            "scaleSensitivity": 0
           }
+        },
+        {
+          "name": "ScriptSystem",
+          "options": {}
         },
         {
           "name": "Animator",
@@ -3641,8 +3645,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 0,
-                "offsetY": 0,
+                "offsetX": -24,
+                "offsetY": 12,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -3652,7 +3656,24 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 3.5
+                "zoom": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "ea3e28c4-02f1-4325-ae15-f9c89e58369e",
+                    "name": "CloudsScript",
+                    "options": {}
+                  },
+                  {
+                    "id": "79707a31-1791-4a99-9282-f84f4dd91d63",
+                    "name": "CameraScript",
+                    "options": {}
+                  }
+                ]
               }
             }
           ],
@@ -3677,7 +3698,7 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 360,
+                "width": 720,
                 "height": 360,
                 "slice": 1,
                 "rotation": 0,
@@ -3693,7 +3714,7 @@
                   "type": "basic",
                   "options": {
                     "blending": "normal",
-                    "color": "#2f4063",
+                    "color": "#5e5a86",
                     "opacity": 1
                   }
                 }
@@ -3731,7 +3752,7 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 384,
+                "width": 720,
                 "height": 120,
                 "slice": 1,
                 "rotation": 0,
@@ -3775,7 +3796,7 @@
               "name": "Sprite",
               "config": {
                 "src": "ground.png",
-                "width": 360,
+                "width": 720,
                 "height": 24,
                 "slice": 1,
                 "rotation": 0,
@@ -3829,7 +3850,7 @@
                 ],
                 "flipX": false,
                 "flipY": false,
-                "sortingLayer": "background-3",
+                "sortingLayer": "background-after-sky",
                 "fit": "stretch",
                 "material": {
                   "type": "basic",
@@ -3846,7 +3867,7 @@
               "config": {
                 "type": "point",
                 "options": {
-                  "color": "#fcffe1",
+                  "color": "#ffffff",
                   "intensity": 1,
                   "distance": 350
                 }
@@ -3978,8 +3999,8 @@
               "name": "Sprite",
               "config": {
                 "src": "clouds.png",
-                "width": 360,
-                "height": 120,
+                "width": 720,
+                "height": 144,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -3988,7 +4009,7 @@
                 ],
                 "flipX": false,
                 "flipY": false,
-                "sortingLayer": "background-3",
+                "sortingLayer": "background-2",
                 "fit": "stretch",
                 "material": {
                   "type": "basic",
@@ -4022,7 +4043,7 @@
               "name": "Sprite",
               "config": {
                 "src": "stars.png",
-                "width": 372,
+                "width": 720,
                 "height": 60,
                 "slice": 1,
                 "rotation": 0,
@@ -4032,8 +4053,8 @@
                 ],
                 "flipX": false,
                 "flipY": false,
-                "sortingLayer": "background-3",
-                "fit": "stretch",
+                "sortingLayer": "background-2",
+                "fit": "repeat",
                 "material": {
                   "type": "basic",
                   "options": {
@@ -4042,6 +4063,46 @@
                     "opacity": 1
                   }
                 }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6738c04b-ad17-41b3-a845-e7844331b5c2",
+          "templateId": "96784f10-d3dd-45c3-8c21-5a79a2afbb19",
+          "fromTemplate": true,
+          "name": "ForestBg-1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 48,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3708e647-b733-4526-8853-ae41c8eb37d5",
+          "templateId": "f14dfd14-d117-41e9-95d0-f8fbfa307d7d",
+          "fromTemplate": true,
+          "name": "ForestBg-2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 32,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
               }
             }
           ],
@@ -11837,6 +11898,59 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "45c059b1-8325-4b3e-8bca-0f434141e30d",
+      "name": "Heal Effect",
+      "components": [
+        {
+          "name": "Effect",
+          "config": {
+            "type": "instant",
+            "applicatorOptions": {},
+            "script": "heal",
+            "value": 25
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 24,
+            "height": 24,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "units",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
     }
   ],
   "loaders": [],

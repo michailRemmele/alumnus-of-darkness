@@ -26,19 +26,15 @@ const CLOUD_IDS = [
 ];
 const OFFSET_Y_MIN = -72;
 const OFFSET_Y_MAX = -24;
-const CLOUD_SIZE = 96;
-const SPEED = 0.5;
-const FIXED_STEP = 0.5;
-const INTERVAL = (CLOUD_SIZE / SPEED) * 1000;
+const CLOUD_SIZE = 72;
+const SPEED = 3;
 
 export class CloudsScript extends Script {
   private scene: Scene;
   private actor: Actor;
   private actorSpawner: ActorSpawner;
   private cameraService: CameraService;
-  private timeout: number;
   private clouds: Array<Actor>;
-  private step: number;
 
   constructor(options: ScriptOptions) {
     super();
@@ -49,10 +45,7 @@ export class CloudsScript extends Script {
 
     this.cameraService = this.scene.getService(CameraService);
 
-    this.timeout = 0;
     this.clouds = [];
-
-    this.step = 0;
 
     this.spawnInitial();
   }
@@ -69,13 +62,7 @@ export class CloudsScript extends Script {
   }
 
   private updateClouds(deltaTime: number): void {
-    this.step += SPEED * (deltaTime / 1000);
-    if (this.step < FIXED_STEP) {
-      return;
-    }
-
-    const step = Math.floor(this.step / FIXED_STEP);
-    this.step %= FIXED_STEP;
+    const step = SPEED * (deltaTime / 1000);
 
     const cameraActor = this.cameraService.getCurrentCamera();
     const camera = cameraActor.getComponent(Camera);
@@ -88,6 +75,8 @@ export class CloudsScript extends Script {
 
       if (transform.relativeOffsetX <= edge) {
         actor.remove();
+        this.spawnCloud((camera.windowSizeX / camera.zoom) / 2 + CLOUD_SIZE / 2);
+
         return false;
       }
 
@@ -108,19 +97,6 @@ export class CloudsScript extends Script {
 
   update(options: UpdateOptions): void {
     this.updateClouds(options.deltaTime);
-
-    this.timeout -= options.deltaTime;
-
-    if (this.timeout > 0) {
-      return;
-    }
-
-    const cameraActor = this.cameraService.getCurrentCamera();
-    const camera = cameraActor.getComponent(Camera);
-
-    this.spawnCloud((camera.windowSizeX / camera.zoom) / 2 + CLOUD_SIZE / 2);
-
-    this.timeout = INTERVAL;
   }
 }
 

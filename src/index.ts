@@ -26,11 +26,15 @@ import {
 import {
   ParallaxSystem,
   Parallax,
+  EffectsSystem,
+  Effect,
+  ActiveEffects,
 } from 'remiz-game-systems';
 
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';
 import * as GameScripts from './game/scripts';
+import { effects } from './game/effects';
 import { applyIosSafariScreenFix } from './ui/utils/ios-screen-fix';
 import { isIos } from './ui/utils/is-ios';
 
@@ -50,6 +54,7 @@ const engine = new Engine({
     UiBridge,
     ScriptSystem,
     ParallaxSystem,
+    EffectsSystem,
     ...Object.values(GameSystems),
   ],
   components: [
@@ -64,12 +69,15 @@ const engine = new Engine({
     ScriptBundle,
     Light,
     Parallax,
+    Effect,
+    ActiveEffects,
     ...Object.values(GameComponents),
   ],
   resources: {
     [ScriptSystem.systemName]: [
       ...Object.values(GameScripts),
     ],
+    [EffectsSystem.systemName]: effects,
     [UiBridge.systemName]: {
       // comment: to avoid eslint issues with extensions
       // eslint-disable-next-line import/extensions

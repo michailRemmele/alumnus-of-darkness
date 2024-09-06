@@ -57,5 +57,7 @@
   "systems.aiSystem.title": "AI System",
   "systems.fightSystem.title": "Fight System",
   "systems.reaper.title": "Reaper",
-  "systems.thumbStickController.title": "Thumb Stick Controller"
+  "systems.thumbStickController.title": "Thumb Stick Controller",
+
+  "resources.effectsSystem.heal.value.title": "Value"
 }

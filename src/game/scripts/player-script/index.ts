@@ -40,6 +40,7 @@ export class PlayerScript extends Script {
     this.actor.addEventListener(CollisionLeave, this.handleCannotResurrect);
     this.actor.addEventListener(EventType.ResurrectInput, this.handleResurrect);
     this.actor.addEventListener(EventType.SummonInput, this.handleSummon);
+    this.actor.addEventListener(EventType.HealInput, this.handleHealMinion);
 
     this.scene.addEventListener(EventType.SelectMinion, this.handleSelectMinion);
   }
@@ -49,6 +50,7 @@ export class PlayerScript extends Script {
     this.actor.removeEventListener(CollisionLeave, this.handleCannotResurrect);
     this.actor.removeEventListener(EventType.ResurrectInput, this.handleResurrect);
     this.actor.removeEventListener(EventType.SummonInput, this.handleSummon);
+    this.actor.removeEventListener(EventType.HealInput, this.handleHealMinion);
 
     this.scene.removeEventListener(EventType.SelectMinion, this.handleSelectMinion);
   }
@@ -59,6 +61,16 @@ export class PlayerScript extends Script {
     if (event.index < spellbook.activeMinions.length) {
       spellbook.selectedGhost = spellbook.activeMinions[event.index].id;
     }
+  };
+
+  private handleHealMinion = (): void => {
+    const spellbook = this.actor.getComponent(Spellbook);
+
+    if (!spellbook.selectedGhost) {
+      // return;
+    }
+
+    // TODO: Complete implementation
   };
 
   private handleSummon = (): void => {

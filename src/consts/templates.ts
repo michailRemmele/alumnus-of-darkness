@@ -4,3 +4,4 @@ export const TELEPORT_TO_ID = 'bb07baee-149b-4721-86c6-88874737d4a4';
 export const CLOUD_1_ID = 'da7c6fd6-e644-4aaa-9f52-7d81c846d1f5';
 export const CLOUD_2_ID = 'a2f9541b-8872-4c01-b473-96ff13a97a0b';
 export const CLOUD_3_ID = 'd2212012-c3ea-418e-adbd-799d45ef2cdb';
+export const HEAL_EFFECT_ID = '45c059b1-8325-4b3e-8bca-0f434141e30d';

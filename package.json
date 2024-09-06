@@ -15,7 +15,7 @@
     "react-i18next": "11.17.2",
     "remiz": "0.12.3-alpha.0",
     "remiz-game-systems": "0.0.1",
-    "remiz-editor": "0.0.15"
+    "remiz-editor": "0.0.17"
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",

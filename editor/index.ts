@@ -1,5 +1,16 @@
-import { ParallaxSystem, Parallax } from 'remiz-game-systems';
-import { parallaxSystem, parallax, locales as gameSystemsLocales } from 'remiz-game-systems/schema';
+import {
+  ParallaxSystem,
+  Parallax,
+  EffectsSystem,
+  Effect,
+} from 'remiz-game-systems';
+import {
+  parallaxSystem,
+  parallax,
+  effectsSystem,
+  effect,
+  locales as gameSystemsLocales,
+} from 'remiz-game-systems/schema';
 
 import {
   componentsSchema as gameComponentsSchema,
@@ -20,11 +31,13 @@ const locales = {
 export const componentsSchema = {
   ...gameComponentsSchema,
   [Parallax.componentName]: parallax,
+  [Effect.componentName]: effect,
 };
 
 export const systemsSchema = {
   ...gameSystemsSchema,
   [ParallaxSystem.systemName]: parallaxSystem,
+  [EffectsSystem.systemName]: effectsSystem,
 };
 
 export {
